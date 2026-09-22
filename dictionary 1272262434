@@ -1,0 +1,501 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "d2ed453a-4b0b-4f46-b12d-263a51a01524",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{0: 10, 1: 20, 2: 30}\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_dict={0:10,1:20}\n",
+    "my_dict[2]=30\n",
+    "print(my_dict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "c22d33ab-51d0-44d8-824c-82f228efa430",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "new dictionary {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}\n"
+     ]
+    }
+   ],
+   "source": [
+    "dic1={1:10,2:20}\n",
+    "dic2={3:30, 4:40} \n",
+    "dic3={5:50,6:60}\n",
+    "new_dict={}\n",
+    "new_dict.update(dic1)\n",
+    "new_dict.update(dic2)\n",
+    "new_dict.update(dic3)\n",
+    "print(\"new dictionary\", new_dict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "28288cea-8162-4f3c-964a-ed3323370d95",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "enter key to search: priya\n"
+     ]
+    },
+    {
+     "ename": "ValueError",
+     "evalue": "invalid literal for int() with base 10: 'priya'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mValueError\u001b[39m                                Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[6]\u001b[39m\u001b[32m, line 2\u001b[39m\n\u001b[32m      1\u001b[39m my_dict={\u001b[32m101\u001b[39m:\u001b[33m\"\u001b[39m\u001b[33mamit\u001b[39m\u001b[33m\"\u001b[39m, \u001b[32m102\u001b[39m:\u001b[33m\"\u001b[39m\u001b[33mrahul\u001b[39m\u001b[33m\"\u001b[39m, \u001b[32m103\u001b[39m:\u001b[33m\"\u001b[39m\u001b[33mpriya\u001b[39m\u001b[33m\"\u001b[39m}\n\u001b[32m----> \u001b[39m\u001b[32m2\u001b[39m key=\u001b[38;5;28;43mint\u001b[39;49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43menter key to search:\u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\n\u001b[32m      3\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m key \u001b[38;5;129;01min\u001b[39;00m my_dict:\n\u001b[32m      4\u001b[39m     \u001b[38;5;28mprint\u001b[39m(\u001b[33m\"\u001b[39m\u001b[33mkey exists in the dictionary\u001b[39m\u001b[33m\"\u001b[39m)\n",
+      "\u001b[31mValueError\u001b[39m: invalid literal for int() with base 10: 'priya'"
+     ]
+    }
+   ],
+   "source": [
+    "my_dict={101:\"amit\", 102:\"rahul\", 103:\"priya\"}\n",
+    "key=int(input(\"enter key to search:\"))\n",
+    "if key in my_dict:\n",
+    "    print(\"key exists in the dictionary\")\n",
+    "else:\n",
+    "    print(\"key does not exist in the dictionary\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "80c8aeb4-97ca-4595-84c1-14433b5b452e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "keys\n",
+      "101\n",
+      "\n",
+      "Values:\n",
+      "amit\n",
+      "\n",
+      "Keys and Values:\n",
+      "101 amit\n",
+      "102 amit\n",
+      "103 amit\n",
+      "rahul\n",
+      "\n",
+      "Keys and Values:\n",
+      "101 rahul\n",
+      "102 rahul\n",
+      "103 rahul\n",
+      "priya\n",
+      "\n",
+      "Keys and Values:\n",
+      "101 priya\n",
+      "102 priya\n",
+      "103 priya\n",
+      "102\n",
+      "\n",
+      "Values:\n",
+      "amit\n",
+      "\n",
+      "Keys and Values:\n",
+      "101 amit\n",
+      "102 amit\n",
+      "103 amit\n",
+      "rahul\n",
+      "\n",
+      "Keys and Values:\n",
+      "101 rahul\n",
+      "102 rahul\n",
+      "103 rahul\n",
+      "priya\n",
+      "\n",
+      "Keys and Values:\n",
+      "101 priya\n",
+      "102 priya\n",
+      "103 priya\n",
+      "103\n",
+      "\n",
+      "Values:\n",
+      "amit\n",
+      "\n",
+      "Keys and Values:\n",
+      "101 amit\n",
+      "102 amit\n",
+      "103 amit\n",
+      "rahul\n",
+      "\n",
+      "Keys and Values:\n",
+      "101 rahul\n",
+      "102 rahul\n",
+      "103 rahul\n",
+      "priya\n",
+      "\n",
+      "Keys and Values:\n",
+      "101 priya\n",
+      "102 priya\n",
+      "103 priya\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_dict={\n",
+    "    101:\"amit\",\n",
+    "    102:\"rahul\",\n",
+    "    103:\"priya\"\n",
+    "}\n",
+    "print(\"keys\")\n",
+    "for key in my_dict:\n",
+    "    print(key)\n",
+    "    print(\"\\nValues:\")\n",
+    "    for value in my_dict.values():\n",
+    "        \n",
+    "        print(value)\n",
+    "        print(\"\\nKeys and Values:\")\n",
+    "        for key, velue in my_dict.items():\n",
+    "            print(key,value)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "5f535984-1afb-4921-96dd-7bfad9c3b4e0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1: 1}\n",
+      "{1: 1, 2: 4}\n",
+      "{1: 1, 2: 4, 3: 9}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169, 14: 196}\n",
+      "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225}\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_dict={}\n",
+    "for i in range(1,16):\n",
+    "    my_dict[i]=i**2\n",
+    "    print(my_dict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "5cc57a77-04f4-4ce4-9123-e5c3f749568e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "sum of values: 10\n",
+      "sum of values: 30\n",
+      "sum of values: 60\n",
+      "sum of values: 100\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_dict={\"a\":10, \"b\":20, \"c\":30, \"d\":40}\n",
+    "total=0\n",
+    "for value in my_dict.values():\n",
+    "    total=total+value\n",
+    "    print(\"sum of values:\",total)\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "31685747-d4d3-47af-9060-2c7ca869263b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "original student information\n",
+      "{101: 'amit', 102: 'rahul', 103: 'priya', 104: 'sneha', 105: 'neha'}\n",
+      "\n",
+      "After adding student:\n",
+      "{101: 'amit', 102: 'rahul', 103: 'priya', 104: 'sneha', 105: 'neha', 106: 'rohan'}\n",
+      "nAfter deleting student:\n",
+      "{101: 'amit', 102: 'rahul', 104: 'sneha', 105: 'neha', 106: 'rohan'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_dict={\n",
+    "    101:\"amit\",\n",
+    "    102:\"rahul\",\n",
+    "    103:\"priya\",\n",
+    "    104:\"sneha\",\n",
+    "    105:\"neha\"\n",
+    "}\n",
+    "print(\"original student information\")\n",
+    "print(my_dict)\n",
+    "\n",
+    "#add student\n",
+    "my_dict[106]=\"rohan\"\n",
+    "print(\"\\nAfter adding student:\")\n",
+    "print (my_dict)\n",
+    "\n",
+    "#delete student \n",
+    "del my_dict[103]\n",
+    "print(\"nAfter deleting student:\")\n",
+    "print(my_dict)\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "e944f37f-3679-404c-b14d-047548aa9a76",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dictionary: {'name': 'abc', 'panel': 'b', 'rollno': 34}\n"
+     ]
+    }
+   ],
+   "source": [
+    "list1= [\"name\", \"panel\", \"rollno\"]\n",
+    "list2= [\"abc\", \"b\", 34]\n",
+    "my_dict= dict(zip(list1, list2))\n",
+    "print(\"dictionary:\", my_dict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "dfbb3a91-f7f0-4f61-9ebb-80b603c3273a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "keys list: ['name', 'panel', 'rollno']\n",
+      "values list: ['abc', 'b', 34]\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_dict={\n",
+    "    \"name\":\"abc\",\n",
+    "    \"panel\":\"b\",\n",
+    "    \"rollno\":34\n",
+    "}\n",
+    "keys_list=list(my_dict.keys())\n",
+    "values_list=list(my_dict.values())\n",
+    "print(\"keys list:\", keys_list)\n",
+    "print(\"values list:\", values_list)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "d4445f00-6780-4c3d-8859-970a3846eb1e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "mean of all values: 63.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_dict={\n",
+    "    \"marks1\":23,\n",
+    "    \"marks2\":123,\n",
+    "    \"marks3\":43,\n",
+    "}\n",
+    "total=sum(my_dict.values())\n",
+    "mean=total/len(my_dict)\n",
+    "print(\"mean of all values:\", mean)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "3c526ef7-912a-4d11-b333-cde0059a4cc6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "sorted keys: ['marks', 'name', 'panel', 'rollno']\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_dict={\n",
+    "    \"name\":\"abc\",\n",
+    "    \"panel\":\"b\",\n",
+    "    \"rollno\":34,\n",
+    "    \"marks\":[65,87,67,94]\n",
+    "}\n",
+    "sorted_dict=sorted(my_dict)\n",
+    "print(\"sorted keys:\",sorted_dict)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "02283863-0e4b-47d8-a5d8-186e56c5b89a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "students with highest marks: sneha\n",
+      "highest marks: 95\n"
+     ]
+    }
+   ],
+   "source": [
+    "students={\n",
+    "    \"amit\":85,\n",
+    "    \"rahul\":92,\n",
+    "    \"priya\":78,\n",
+    "    \"sneha\":95,\n",
+    "    \"neha\":88\n",
+    "}\n",
+    "highest_student= max(students,key=students.get)\n",
+    "print(\"students with highest marks:\",highest_student)\n",
+    "print(\"highest marks:\", students [highest_student])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "041fe67a-a06a-4275-a4e0-0928808cff27",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "frequency of elements: {10: 1}\n",
+      "frequency of elements: {10: 1, 20: 1}\n",
+      "frequency of elements: {10: 2, 20: 1, 30: 1}\n",
+      "frequency of elements: {10: 3, 20: 2, 30: 1, 40: 1}\n"
+     ]
+    }
+   ],
+   "source": [
+    "#to count frequency\n",
+    "numbers=[10,20,10,30,20,10,40,30]\n",
+    "frequency={}\n",
+    "for num in numbers:\n",
+    "    if num in frequency:\n",
+    "        frequency[num]=frequency[num]+1\n",
+    "    else:\n",
+    "        frequency[num]=1\n",
+    "        print(\"frequency of elements:\", frequency)\n",
+    "\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "d2707bab-77bf-44c1-be8a-48ae67c43d5d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dictionary sorted by values:\n",
+      "{'rahul': 72, 'sneha': 80, 'amit': 85, 'priya': 95}\n"
+     ]
+    }
+   ],
+   "source": [
+    "#sort dictionary by values\n",
+    "my_dict={\n",
+    "    \"amit\":85,\n",
+    "    \"rahul\":72,\n",
+    "    \"priya\":95,\n",
+    "    \"sneha\":80\n",
+    "}\n",
+    "sorted_dict=dict(sorted(my_dict.items(), key=lambda \n",
+    "                        item:item[1]))\n",
+    "print(\"dictionary sorted by values:\")\n",
+    "print(sorted_dict)\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "94cca496-89e6-440e-a78e-5d98bf50c31b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
